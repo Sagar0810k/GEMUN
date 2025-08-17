@@ -97,59 +97,26 @@ export default function MUNWebsite() {
     { time: "18:00 - 19:00", event: "Closing Ceremony & Awards", location: "Auditorium" },
   ]
 
-  const galleryImages = [
-    {
-      src: "/mun-delegates-debate.png",
-      alt: "Delegates in committee session",
-      title: "Committee Debates",
-    },
-    {
-      src: "/opening-ceremony.png",
-      alt: "Opening ceremony",
-      title: "Opening Ceremony",
-    },
-    {
-      src: "/mun-networking.png",
-      alt: "Networking session",
-      title: "Networking",
-    },
-    {
-      src: "/award-ceremony-winners.png",
-      alt: "Award ceremony",
-      title: "Awards Ceremony",
-    },
-    {
-      src: "/mun-group-photo.png",
-      alt: "Group photo",
-      title: "Conference Participants",
-    },
-    {
-      src: "/placeholder-u48jy.png",
-      alt: "Diplomatic negotiations",
-      title: "Diplomatic Sessions",
-    },
-  ]
-
   const messages = [
     {
       name: "Dr. Sarah Johnson",
       title: "Conference Director & Professor of International Relations",
       message:
-        "CollegeMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
+        "GRAMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
       image: "/female-professor-headshot.png",
     },
     {
       name: "Ambassador Michael Chen",
       title: "Former UN Representative & Keynote Speaker",
       message:
-        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by CollegeMUN participants. This conference truly prepares students for the complexities of global governance.",
+        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GRAMUN participants. This conference truly prepares students for the complexities of global governance.",
       image: "/placeholder-76uay.png",
     },
     {
       name: "Emma Rodriguez",
       title: "Student Body President & MUN Society Chair",
       message:
-        "As someone who has participated in MUN conferences worldwide, I can confidently say that CollegeMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
+        "As someone who has participated in MUN conferences worldwide, I can confidently say that GRAMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
       image: "/female-student-leader-headshot.png",
     },
   ]
@@ -182,7 +149,7 @@ export default function MUNWebsite() {
             <div className="flex items-center space-x-2 group">
               <Globe className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-12" />
               <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                CollegeMUN 2025
+                GRAMUN 2025
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -195,13 +162,6 @@ export default function MUNWebsite() {
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
               >
                 About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a
-                href="#gallery"
-                className="relative text-foreground hover:text-primary transition-all duration-300 group"
-              >
-                Gallery
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a
@@ -254,33 +214,23 @@ export default function MUNWebsite() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden z-10">
-        <div className="absolute inset-0 gradient-animate opacity-5"></div>
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full animate-pulse"></div>
-          <div
-            className="absolute top-1/3 right-1/3 w-1 h-1 bg-secondary/30 rounded-full animate-bounce"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-primary/10 rounded-full animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-secondary/20 rounded-full animate-bounce"
-            style={{ animationDelay: "0.5s" }}
-          ></div>
-        </div>
+      <section 
+        id="home" 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 bg-cover bg-center" 
+        style={{ backgroundImage: "url('/WhatsApp Image 2025-08-17 at 7.39.02 PM.jpeg')" }}
+      >
+        <div className="absolute inset-0 bg-background/10 backdrop-blur-sm"></div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="scroll-fade-in">
-            <h1 className="font-sans font-black text-4xl sm:text-6xl lg:text-7xl mb-6 mt-16 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-gradient-x">
-              CollegeMUN 2025
+            <br /><br />
+            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-blue-500 animate-fade-in-down">
+              Graphic Era Hill University Model United Nations Conference 2025
             </h1>
-            <p
-              className="font-serif text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
-            >
-              Experience diplomacy, debate, and global leadership at our premier Model United Nations conference
+            <p className="font-serif text-2xl sm:text-3xl font-semibold text-primary mb-4 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
+              1st & 2nd November 2025
+            </p>
+            <p className="font-serif text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+              "From discord to diplomacy: shaping peace through dialogue."
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12 opacity-0 animate-fade-in-up"
@@ -343,7 +293,7 @@ export default function MUNWebsite() {
         <div className="max-w-6xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              About CollegeMUN
+              About GRAMUN
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Join us for an immersive diplomatic experience where students from across the region come together to
@@ -385,41 +335,6 @@ export default function MUNWebsite() {
                   </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="scroll-fade-in text-center mb-16">
-            <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Conference Gallery
-            </h2>
-            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Glimpses from our previous conferences showcasing the energy, engagement, and excellence of our MUN
-              community
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="scroll-fade-in group cursor-pointer">
-                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 group-hover:scale-105 transform group-hover:-rotate-1 bg-gradient-to-br from-card to-card/80">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={image.src || "/placeholder.svg"}
-                      alt={image.alt}
-                      className="w-full h-64 object-cover transition-all duration-500 group-hover:scale-125 group-hover:brightness-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                      <h3 className="font-sans font-bold text-lg drop-shadow-lg">{image.title}</h3>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  </div>
-                </Card>
-              </div>
             ))}
           </div>
         </div>
@@ -476,7 +391,7 @@ export default function MUNWebsite() {
               Messages from Our Community
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear from the distinguished individuals who make CollegeMUN an exceptional experience
+              Hear from the distinguished individuals who make GRAMUN an exceptional experience
             </p>
           </div>
 
@@ -576,15 +491,27 @@ export default function MUNWebsite() {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Mail className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">info@collegemun2025.edu</span>
+                  <span className="font-serif">thewordwhimsgehu@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">+1 (555) 123-4567</span>
+                  <span className="font-serif">General Secretary: 9012387553</span>
                 </div>
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <MapPin className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">College Campus, Main Building</span>
+                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-serif">Deputy Secretary General: +91 94109 07796</span>
+                </div>
+                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
+                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-serif">Director General: +91 70608 71677</span>
+                </div>
+                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
+                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-serif">Chief Advisor: +91 99973 96399</span>
+                </div>
+                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
+                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-serif">Event Coordinator: +91 91156 86585</span>
                 </div>
               </CardContent>
             </Card>
@@ -627,13 +554,12 @@ export default function MUNWebsite() {
           <div className="flex justify-center items-center space-x-2 mb-4 group">
             <Globe className="h-8 w-8 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              CollegeMUN 2025
+              GRAMUN 2025
             </span>
           </div>
           <p className="font-serif text-muted-foreground mb-4">
             Empowering the next generation of global leaders through diplomatic simulation
           </p>
-          <p className="font-serif text-sm text-muted-foreground">© 2025 CollegeMUN. All rights reserved.</p>
         </div>
       </footer>
     </div>
