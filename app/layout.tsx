@@ -17,9 +17,8 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "GRAMUN 2025: Graphic Era Hill University Model United Nations Conference",
+  title: "GEMUN 2025: Graphic Era Hill University Model United Nations Conference",
   description: "Join us for GRAMUN 2025, the Graphic Era Hill University Model United Nations Conference. Engage in diplomacy, debate global issues with 500+ delegates, and participate in 8 specialized committees. Get insights from distinguished chief guests.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

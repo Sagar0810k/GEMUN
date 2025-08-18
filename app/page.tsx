@@ -17,7 +17,7 @@ export default function MUNWebsite() {
   })
   const { theme, setTheme } = useTheme()
 
-  const conferenceDate = new Date("2025-11-01T09:00:00")
+  const conferenceDate = new Date("2025-10-11T09:00:00")
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -102,21 +102,21 @@ export default function MUNWebsite() {
       name: "Dr. Sarah Johnson",
       title: "Conference Director & Professor of International Relations",
       message:
-        "GRAMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
+        "GEMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
       image: "/female-professor-headshot.png",
     },
     {
       name: "Ambassador Michael Chen",
       title: "Former UN Representative & Keynote Speaker",
       message:
-        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GRAMUN participants. This conference truly prepares students for the complexities of global governance.",
+        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GEMUN participants. This conference truly prepares students for the complexities of global governance.",
       image: "/placeholder-76uay.png",
     },
     {
       name: "Emma Rodriguez",
       title: "Student Body President & MUN Society Chair",
       message:
-        "As someone who has participated in MUN conferences worldwide, I can confidently say that GRAMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
+        "As someone who has participated in MUN conferences worldwide, I can confidently say that GEMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
       image: "/female-student-leader-headshot.png",
     },
   ]
@@ -147,9 +147,9 @@ export default function MUNWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2 group">
-              <Globe className="h-8 w-8 text-primary transition-transform duration-300 group-hover:rotate-12" />
+              <img src="/MUN Logo 1.png" alt="MUN Logo" className="h-10 w-auto" />
               <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                GRAMUN 2025
+                GEMUN 2025
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -198,7 +198,8 @@ export default function MUNWebsite() {
               >
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </a
+>
               <Button
                 variant="ghost"
                 size="icon"
@@ -214,34 +215,39 @@ export default function MUNWebsite() {
       </nav>
 
       {/* Hero Section */}
-      <section 
-        id="home" 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 bg-cover bg-center" 
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 bg-cover bg-center"
         style={{ backgroundImage: "url('/WhatsApp Image 2025-08-17 at 7.39.02 PM.jpeg')" }}
       >
         <div className="absolute inset-0 bg-background/10 backdrop-blur-sm"></div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="scroll-fade-in">
             <br /><br />
-            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-blue-500 animate-fade-in-down">
+            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-darkblue animate-fade-in-down glow" style={{ color: 'darkblue' }}>
               Graphic Era Hill University Model United Nations Conference 2025
             </h1>
-            <p className="font-serif text-2xl sm:text-3xl font-semibold text-primary mb-4 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}>
-              1st & 2nd November 2025
+            <p className="font-serif text-2xl sm:text-3xl font-semibold mb-4 leading-relaxed animate-fade-in-up glow" style={{ color: '#3F51B5', animationDelay: "0.3s", animationFillMode: "forwards" }}>
+              11th and 12th October 2025
             </p>
-            <p className="font-serif text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+            <p className="font-serif text-xl sm:text-2xl mb-8 leading-relaxed opacity-0 animate-fade-in-up glow" style={{ color: '#3F51B5', animationDelay: "0.6s", animationFillMode: "forwards" }}>
               "From discord to diplomacy: shaping peace through dialogue."
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12 opacity-0 animate-fade-in-up"
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
-              <Button
-                size="lg"
-                className="text-lg px-8 py-6 transform hover:scale-105 hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary"
+              <Link
+                href="https://forms.gle/QR4pXivgW35zDCbx6"
+                passHref
               >
-                <span className="relative z-10">Register Now</span>
-              </Button>
+                <Button
+                  size="lg"
+                  className="text-lg px-8 py-6 transform hover:scale-105 hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary"
+                >
+                  <span className="relative z-10">Register Now</span>
+                </Button>
+              </Link>
               <Link href="/learn-more">
                 <Button
                   variant="outline"
@@ -293,7 +299,7 @@ export default function MUNWebsite() {
         <div className="max-w-6xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              About GRAMUN
+              About GEMUN
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Join us for an immersive diplomatic experience where students from across the region come together to
@@ -305,12 +311,12 @@ export default function MUNWebsite() {
             {[
               {
                 icon: <Users className="h-12 w-12 text-primary" />,
-                title: "500+ Delegates",
+                title: "250+ Delegates",
                 description: "Students from over 50 colleges participating in our largest conference yet",
               },
               {
                 icon: <Globe className="h-12 w-12 text-primary" />,
-                title: "8 Committees",
+                title: "7 Committees",
                 description: "Diverse range of UN bodies covering global challenges and opportunities",
               },
               {
@@ -391,7 +397,7 @@ export default function MUNWebsite() {
               Messages from Our Community
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear from the distinguished individuals who make GRAMUN an exceptional experience
+              Hear from the distinguished individuals who make GEMUN an exceptional experience
             </p>
           </div>
 
@@ -521,27 +527,42 @@ export default function MUNWebsite() {
                 <CardTitle className="font-sans font-bold">Quick Links</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                <Link
+                  href="/delegate-handbook"
+                  passHref
                 >
-                  <BookOpen className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                  Delegate Handbook
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                  >
+                    <BookOpen className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
+                    Delegate Handbook
+                  </Button>
+                </Link>
+                <Link
+                  href="https://forms.gle/QR4pXivgW35zDCbx6"
+                  passHref
                 >
-                  <Calendar className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                  Registration Form
-                </Button>
-                <Button
-                  variant="outline"
-                  className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                  >
+                    <Calendar className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
+                    Registration Form
+                  </Button>
+                </Link>
+                <Link
+                  href="/committee-guides"
+                  passHref
                 >
-                  <Users className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                  Committee Guides
-                </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
+                  >
+                    <Users className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
+                    Committee Guides
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -554,7 +575,7 @@ export default function MUNWebsite() {
           <div className="flex justify-center items-center space-x-2 mb-4 group">
             <Globe className="h-8 w-8 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              GRAMUN 2025
+              GEMUN 2025
             </span>
           </div>
           <p className="font-serif text-muted-foreground mb-4">
