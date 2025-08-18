@@ -191,13 +191,6 @@ export default function MUNWebsite() {
               >
                 Schedule
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a
-                href="#contact"
-                className="relative text-foreground hover:text-primary transition-all duration-300 group"
-              >
-                Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a
 >
               <Button
@@ -218,19 +211,19 @@ export default function MUNWebsite() {
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 bg-cover bg-center"
-        style={{ backgroundImage: "url('/WhatsApp Image 2025-08-17 at 7.39.02 PM.jpeg')" }}
+        style={{ backgroundImage: "url('/Untitled design (1).png')" }}
       >
         <div className="absolute inset-0 bg-background/10 backdrop-blur-sm"></div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="scroll-fade-in">
             <br /><br />
-            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-darkblue animate-fade-in-down glow" style={{ color: 'darkblue' }}>
+            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-darkblue animate-fade-in-down glow" style={{ color: '#fefdf0', textShadow: '0 0 1px #fefdf0, 0 0 2px #fefdf0, 0 0 3px #fefdf0' }}>
               Graphic Era Hill University Model United Nations Conference 2025
             </h1>
-            <p className="font-serif text-2xl sm:text-3xl font-semibold mb-4 leading-relaxed animate-fade-in-up glow" style={{ color: '#3F51B5', animationDelay: "0.3s", animationFillMode: "forwards" }}>
+            <p className="font-serif text-2xl sm:text-3xl font-semibold mb-4 leading-relaxed animate-fade-in-up glow" style={{ color: '#9ea7d6', animationDelay: "0.3s", animationFillMode: "forwards" }}>
               11th and 12th October 2025
             </p>
-            <p className="font-serif text-xl sm:text-2xl mb-8 leading-relaxed opacity-0 animate-fade-in-up glow" style={{ color: '#3F51B5', animationDelay: "0.6s", animationFillMode: "forwards" }}>
+            <p className="font-serif text-xl sm:text-2xl mb-8 leading-relaxed opacity-0 animate-fade-in-up glow" style={{ color: '#c9cbd8', animationDelay: "0.6s", animationFillMode: "forwards" }}>
               "From discord to diplomacy: shaping peace through dialogue."
             </p>
             <div
@@ -265,7 +258,7 @@ export default function MUNWebsite() {
             className="scroll-fade-in opacity-0 animate-fade-in-up"
             style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
           >
-            <h2 className="font-sans font-bold text-2xl mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+            <h2 className="font-sans font-bold text-2xl mb-6" style={{ color: '#9ea7d6' }}>
               Conference Countdown
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">

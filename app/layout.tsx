@@ -36,6 +36,7 @@ html {
   --font-serif: ${openSans.variable};
 }
         `}</style>
+        <link rel="icon" href="/MUN Logo 1.ico" />
       </head>
       <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
