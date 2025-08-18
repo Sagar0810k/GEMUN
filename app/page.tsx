@@ -99,25 +99,25 @@ export default function MUNWebsite() {
 
   const messages = [
     {
-      name: "Dr. Sarah Johnson",
-      title: "Conference Director & Professor of International Relations",
+      name: "Retd. Conl. Prof. A.K.Nair",
+      title: "Conference Director ",
       message:
         "GEMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
-      image: "/female-professor-headshot.png",
+      image: "/him.png",
     },
     {
-      name: "Ambassador Michael Chen",
-      title: "Former UN Representative & Keynote Speaker",
+      name: "Mrs. Maya G Pillai",
+      title: "Event Coordinator",
       message:
         "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GEMUN participants. This conference truly prepares students for the complexities of global governance.",
-      image: "/placeholder-76uay.png",
+      image: "/hi.png",
     },
     {
-      name: "Emma Rodriguez",
-      title: "Student Body President & MUN Society Chair",
+      name: "Ms. Ishita Karnatak",
+      title: "Secretary General",
       message:
         "As someone who has participated in MUN conferences worldwide, I can confidently say that GEMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
-      image: "/female-student-leader-headshot.png",
+      image: "/she.png",
     },
   ]
 
@@ -304,7 +304,7 @@ export default function MUNWebsite() {
             {[
               {
                 icon: <Users className="h-12 w-12 text-primary" />,
-                title: "250+ Delegates",
+                title: "300+ Delegates",
                 description: "Students from over 50 colleges participating in our largest conference yet",
               },
               {
