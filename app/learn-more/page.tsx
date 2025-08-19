@@ -84,32 +84,6 @@ export default function LearnMorePage() {
     },
   ]
 
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "Best Delegate Winner 2024",
-      college: "Stanford University",
-      quote:
-        "CollegeMUN transformed my understanding of international relations. The experience was incredibly enriching and opened doors to amazing opportunities.",
-      rating: 5,
-    },
-    {
-      name: "Ahmed Hassan",
-      role: "Outstanding Delegate",
-      college: "Harvard University",
-      quote:
-        "The quality of debate and the professionalism of the conference exceeded all my expectations. Truly a world-class MUN experience.",
-      rating: 5,
-    },
-    {
-      name: "Maria Rodriguez",
-      role: "Committee Chair",
-      college: "Yale University",
-      quote:
-        "As a chair, I was impressed by the dedication of delegates and the high standard of preparation. This conference sets the bar for excellence.",
-      rating: 5,
-    },
-  ]
 
   const faqs = [
     {
@@ -231,38 +205,6 @@ export default function LearnMorePage() {
                       </li>
                     ))}
                   </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="scroll-fade-in text-center mb-16">
-            <h2 className="font-sans font-bold text-4xl mb-6">What Participants Say</h2>
-            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear from past delegates about their transformative experiences
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="scroll-fade-in hover:shadow-lg transition-shadow">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <p className="font-serif text-muted-foreground mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
-                  <div>
-                    <h4 className="font-sans font-bold text-lg">{testimonial.name}</h4>
-                    <p className="font-serif text-sm text-primary font-semibold">{testimonial.role}</p>
-                    <p className="font-serif text-sm text-muted-foreground">{testimonial.college}</p>
-                  </div>
                 </CardContent>
               </Card>
             ))}
