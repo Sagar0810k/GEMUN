@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Sun, Moon, Quote } from "lucide-react"
+import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Sun, Moon, Quote, Shirt } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import LiquidBackground from "@/components/liquid-background"
@@ -17,7 +17,7 @@ export default function MUNWebsite() {
   })
   const { theme, setTheme } = useTheme()
 
-  const conferenceDate = new Date("2025-10-11T09:00:00")
+  const conferenceDate = new Date("2025-11-15T09:00:00")
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -57,44 +57,59 @@ export default function MUNWebsite() {
 
   const committees = [
     {
-      name: "United Nations Security Council",
-      abbreviation: "UNSC",
-      topic: "Addressing Regional Conflicts in the Middle East",
-      delegates: 15,
-      difficulty: "Advanced",
+      name: "United Nations Commission on the Status of Women",
+      abbreviation: "UNCSW",
+      topic: "Implementing the Beijing Platform for Action in Alignment with the SDGs, with Focus on Strengthening National Mechanisms for Gender Equality and Women's Empowerment.",
     },
     {
-      name: "General Assembly",
-      abbreviation: "GA",
-      topic: "Climate Change and Sustainable Development",
-      delegates: 193,
-      difficulty: "Beginner",
+      name: "United Nations Framework Convention on Climate Change",
+      abbreviation: "UNFCCC",
+      topic: "Promoting Renewable Energy Transition in Developing Economies through Innovation and sustainable Policies.",
     },
     {
-      name: "Economic and Social Council",
-      abbreviation: "ECOSOC",
-      topic: "Global Economic Recovery Post-Pandemic",
-      delegates: 54,
-      difficulty: "Intermediate",
+      name: "United Nations Development Programme",
+      abbreviation: "UNDP",
+      topic: "Reconciling Global Power Politics with the UNDP’s Mandate of Neutral Democratic Support.",
     },
     {
-      name: "Human Rights Council",
-      abbreviation: "HRC",
-      topic: "Digital Rights and Privacy in the Modern Age",
-      delegates: 47,
-      difficulty: "Intermediate",
+      name: "United Nations Human Rights Council",
+      abbreviation: "UNHRC",
+      topic: "The Right to a Clean, Healthy, and Sustainable Environment: Advancing Accountability for Environmental Human Rights Violations.",
     },
-  ]
+    {
+      name: "Economic and Financial Committee",
+      abbreviation: "ECOFIN",
+      topic: "Strengthening International Frameworks to Combat Illicit Financial Flows and Money Laundering.",
+    },
+    {
+      name: "Lok Sabha",
+      abbreviation: "Lok Sabha",
+      topic: "No Confidence Motion : In Reference to Discrepancies in Electoral Process raised by opposition",
+    },
+    {
+      name: "International Press (IP)",
+      abbreviation: "IP",
+      topic: "Journalism, Photography, Caricature and Undisclosed Portfolio.",
+    },
+  ];
+
 
   const schedule = [
-    { time: "08:00 - 09:00", event: "Registration & Welcome Breakfast", location: "Main Lobby" },
-    { time: "09:00 - 09:30", event: "Opening Ceremony", location: "Auditorium" },
-    { time: "09:30 - 12:00", event: "Committee Session I", location: "Various Rooms" },
-    { time: "12:00 - 13:00", event: "Lunch Break", location: "Cafeteria" },
-    { time: "13:00 - 15:30", event: "Committee Session II", location: "Various Rooms" },
-    { time: "15:30 - 16:00", event: "Coffee Break", location: "Main Lobby" },
-    { time: "16:00 - 18:00", event: "Committee Session III", location: "Various Rooms" },
-    { time: "18:00 - 19:00", event: "Closing Ceremony & Awards", location: "Auditorium" },
+    { time: "8:00 - 9:00 am", event: "Registration" },
+    { time: "9:00 - 9:30 am", event: "High Tea" },
+    { time: "9:30 - 10:30 am", event: "Inaugural" },
+    { time: "10:30 am - 1:00 pm", event: "Session 1" },
+    { time: "1:00 - 2:00 pm", event: "Lunch" },
+    { time: "2:00 - 5:00 pm", event: "Session 2" },
+    { time: "5:00 - 5:30 pm", event: "High Tea" },
+  ]
+
+  const scheduleDay2 = [
+    { time: "10:00 am - 1:00 pm", event: "Session 3" },
+    { time: "1:00 - 2:00 pm", event: "Lunch" },
+    { time: "2:00 - 4:00 pm", event: "Session 4" },
+    { time: "4:00 - 5:00 pm", event: "Closing Ceremony & Prize Distribution" },
+    { time: "5:00 - 6:30 pm", event: "Socials & High Tea" },
   ]
 
   const messages = [
@@ -102,39 +117,19 @@ export default function MUNWebsite() {
       name: "Retd. Conl. Prof. A.K.Nair",
       title: "Conference Director ",
       message:
-        "GEMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
-      image: "/him.png",
+        "GRAMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
     },
     {
       name: "Mrs. Maya G Pillai",
       title: "Event Coordinator",
       message:
-        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GEMUN participants. This conference truly prepares students for the complexities of global governance.",
-      image: "/hi.png",
+        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GRAMUN participants. This conference truly prepares students for the complexities of global governance.",
     },
     {
       name: "Ms. Ishita Karnatak",
       title: "Secretary General",
       message:
-        "As someone who has participated in MUN conferences worldwide, I can confidently say that GEMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
-      image: "/she.png",
-    },
-  ]
-
-  const chiefGuests = [
-    {
-      name: "Hon. Patricia Williams",
-      title: "Former Secretary-General of International Peace Organization",
-      description:
-        "A distinguished diplomat with over 30 years of experience in international relations and conflict resolution.",
-      image: "/female-diplomat-headshot.png",
-    },
-    {
-      name: "Dr. James Morrison",
-      title: "Nobel Peace Prize Laureate & Human Rights Advocate",
-      description:
-        "Renowned for his groundbreaking work in global human rights advocacy and sustainable development initiatives.",
-      image: "/distinguished-academic-headshot.png",
+        "As someone who has participated in MUN conferences worldwide, I can confidently say that GRAMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
     },
   ]
 
@@ -149,7 +144,7 @@ export default function MUNWebsite() {
             <div className="flex items-center space-x-2 group">
               <img src="/MUN Logo 1.png" alt="MUN Logo" className="h-10 w-auto" />
               <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                GEMUN 2025
+                GRAMUN 2025
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -164,15 +159,8 @@ export default function MUNWebsite() {
                 About
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a
-                href="#chief-guests"
-                className="relative text-foreground hover:text-primary transition-all duration-300 group"
-              >
-                Chief Guests
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
               <Link
-                href="/committees"
+                href="#committees"
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
               >
                 Committees
@@ -191,8 +179,14 @@ export default function MUNWebsite() {
               >
                 Schedule
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a
->
+              </a>
+              <a
+                href="#dress-code"
+                className="relative text-foreground hover:text-primary transition-all duration-300 group"
+              >
+                Dress Code
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
               <Button
                 variant="ghost"
                 size="icon"
@@ -221,7 +215,7 @@ export default function MUNWebsite() {
               Graphic Era Hill University Model United Nations Conference 2025
             </h1>
             <p className="font-serif text-2xl sm:text-3xl font-semibold mb-4 leading-relaxed animate-fade-in-up glow" style={{ color: '#9ea7d6', animationDelay: "0.3s", animationFillMode: "forwards" }}>
-              11th and 12th October 2025
+              15th and 16th November 2025
             </p>
             <p className="font-serif text-xl sm:text-2xl mb-8 leading-relaxed opacity-0 animate-fade-in-up glow" style={{ color: '#c9cbd8', animationDelay: "0.6s", animationFillMode: "forwards" }}>
               "From discord to diplomacy: shaping peace through dialogue."
@@ -292,7 +286,7 @@ export default function MUNWebsite() {
         <div className="max-w-6xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              About GEMUN
+              About GRAMUN
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Join us for an immersive diplomatic experience where students from across the region come together to
@@ -314,7 +308,7 @@ export default function MUNWebsite() {
               },
               {
                 icon: <Award className="h-12 w-12 text-primary" />,
-                title: "Expert Judges",
+                title: "Executive Board",
                 description: "Experienced diplomats and academics guiding our committee sessions",
               },
             ].map((item, index) => (
@@ -338,42 +332,37 @@ export default function MUNWebsite() {
           </div>
         </div>
       </section>
-
-      {/* Chief Guests Section */}
-      <section id="chief-guests" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+      
+      {/* Committees and Agendas Section */}
+      <section id="committees" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Our Distinguished Chief Guests
+              Committees & Agendas
             </h2>
-            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              We are honored to welcome these exceptional leaders who will share their insights and expertise with our
-              delegates
+            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Explore the committees and the critical issues they will be addressing.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {chiefGuests.map((guest, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {committees.map((committee, index) => (
               <Card
                 key={index}
-                className="scroll-fade-in hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 group bg-gradient-to-br from-card to-card/50 border-primary/10"
+                className="scroll-fade-in group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-card to-card/50 border-primary/10"
               >
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <img
-                      src={guest.image || "/placeholder.svg"}
-                      alt={guest.name}
-                      className="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-primary/20 transition-all duration-500 group-hover:border-primary/50 group-hover:scale-110 group-hover:shadow-xl"
-                    />
-                  </div>
-                  <h3 className="font-sans font-bold text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
-                    {guest.name}
-                  </h3>
-                  <p className="font-serif text-primary font-semibold mb-4 group-hover:text-secondary transition-colors duration-300">
-                    {guest.title}
+                <CardHeader>
+                  <CardTitle className="font-sans font-bold text-lg mb-1 group-hover:text-primary transition-colors duration-300">
+                    {committee.abbreviation}
+                  </CardTitle>
+                  <p className="font-serif text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    {committee.name}
                   </p>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-sans font-semibold text-lg mb-2">Agenda:</h4>
                   <p className="font-serif text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                    {guest.description}
+                    {committee.topic}
                   </p>
                 </CardContent>
               </Card>
@@ -382,15 +371,16 @@ export default function MUNWebsite() {
         </div>
       </section>
 
+
       {/* Messages Section */}
-      <section id="messages" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section id="messages" className="py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="scroll-fade-in text-center mb-20">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Messages from Our Community
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear from the distinguished individuals who make GEMUN an exceptional experience
+              Hear from the distinguished individuals who make GRAMUN an exceptional experience
             </p>
           </div>
 
@@ -408,11 +398,6 @@ export default function MUNWebsite() {
                     "{person.message}"
                   </p>
                   <div className="flex items-center space-x-6 mt-auto">
-                    <img
-                      src={person.image || "/placeholder.svg"}
-                      alt={person.name}
-                      className="w-20 h-20 rounded-full object-cover border-2 border-primary/20 transition-all duration-500 group-hover:border-primary/50 group-hover:scale-110 group-hover:shadow-lg"
-                    />
                     <div>
                       <h4 className="font-sans font-bold text-xl mb-1 group-hover:text-primary transition-colors duration-300">
                         {person.name}
@@ -430,7 +415,7 @@ export default function MUNWebsite() {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="schedule" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -439,33 +424,109 @@ export default function MUNWebsite() {
             <p className="font-serif text-xl text-muted-foreground">A full day of diplomatic engagement and learning</p>
           </div>
 
-          <div className="space-y-4">
-            {schedule.map((item, index) => (
-              <Card
-                key={index}
-                className="scroll-fade-in hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] group bg-gradient-to-r from-card to-card/80 border-primary/10"
-              >
-                <CardContent className="p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div className="flex items-center space-x-4 mb-2 md:mb-0">
-                      <div className="flex items-center space-x-2">
-                        <Clock className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
-                        <span className="font-sans font-semibold group-hover:text-primary transition-colors duration-300">
-                          {item.time}
-                        </span>
+          <div className="space-y-8">
+            <div className="text-center">
+              <h3 className="font-sans font-bold text-2xl mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Day 1 (15th November)
+              </h3>
+              <div className="space-y-4">
+                {schedule.map((item, index) => (
+                  <Card
+                    key={index}
+                    className="scroll-fade-in hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] group bg-gradient-to-r from-card to-card/80 border-primary/10"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div className="flex items-center space-x-4 mb-2 md:mb-0">
+                          <div className="flex items-center space-x-2">
+                            <Clock className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
+                            <span className="font-sans font-semibold group-hover:text-primary transition-colors duration-300">
+                              {item.time}
+                            </span>
+                          </div>
+                          <div className="font-serif text-lg group-hover:text-primary transition-colors duration-300">
+                            {item.event}
+                          </div>
+                        </div>
                       </div>
-                      <div className="font-serif text-lg group-hover:text-primary transition-colors duration-300">
-                        {item.event}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <h3 className="font-sans font-bold text-2xl mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Day 2 (16th November)
+              </h3>
+              <div className="space-y-4">
+                {scheduleDay2.map((item, index) => (
+                  <Card
+                    key={index}
+                    className="scroll-fade-in hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] group bg-gradient-to-r from-card to-card/80 border-primary/10"
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div className="flex items-center space-x-4 mb-2 md:mb-0">
+                          <div className="flex items-center space-x-2">
+                            <Clock className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
+                            <span className="font-sans font-semibold group-hover:text-primary transition-colors duration-300">
+                              {item.time}
+                            </span>
+                          </div>
+                          <div className="font-serif text-lg group-hover:text-primary transition-colors duration-300">
+                            {item.event}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-center space-x-2 text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                      <MapPin className="h-4 w-4 transform group-hover:bounce" />
-                      <span className="text-sm">{item.location}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dress Code Section */}
+      <section id="dress-code" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="scroll-fade-in mb-16">
+            <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Dress Code
+            </h2>
+            <p className="font-serif text-xl text-muted-foreground">
+              Please adhere to the dress code for each day of the conference.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group bg-gradient-to-br from-card to-card/50 border-primary/10">
+              <CardContent className="p-8">
+                <div className="flex justify-center mb-6">
+                  <Shirt className="h-16 w-16 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="font-sans font-bold text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
+                  Day 1
+                </h3>
+                <p className="font-serif text-xl text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Indian Formals
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group bg-gradient-to-br from-card to-card/50 border-primary/10">
+              <CardContent className="p-8">
+                <div className="flex justify-center mb-6">
+                  <Shirt className="h-16 w-16 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="font-sans font-bold text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
+                  Day 2
+                </h3>
+                <p className="font-serif text-xl text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                  Western Formals
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -490,27 +551,17 @@ export default function MUNWebsite() {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Mail className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">thewordwhimsgehu@gmail.com</span>
+                  <span className="font-serif">bhimtal.mun@gehu.ac.in</span>
                 </div>
+                
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">General Secretary: 9012387553</span>
+                  <span className="font-serif">Director General : +91 70608 71677</span>
                 </div>
+                
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Deputy Secretary General: +91 94109 07796</span>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Director General: +91 70608 71677</span>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Chief Advisor: +91 99973 96399</span>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Event Coordinator: +91 91156 86585</span>
+                  <span className="font-serif">Coul Affairs : +91 87550 58526</span>
                 </div>
               </CardContent>
             </Card>
@@ -520,18 +571,7 @@ export default function MUNWebsite() {
                 <CardTitle className="font-sans font-bold">Quick Links</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Link
-                  href="/delegate-handbook"
-                  passHref
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
-                  >
-                    <BookOpen className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                    Delegate Handbook
-                  </Button>
-                </Link>
+                
                 <Link
                   href="https://forms.gle/QR4pXivgW35zDCbx6"
                   passHref
@@ -548,13 +588,7 @@ export default function MUNWebsite() {
                   href="/committee-guides"
                   passHref
                 >
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
-                  >
-                    <Users className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                    Committee Guides
-                  </Button>
+                  
                 </Link>
               </CardContent>
             </Card>
@@ -568,7 +602,7 @@ export default function MUNWebsite() {
           <div className="flex justify-center items-center space-x-2 mb-4 group">
             <Globe className="h-8 w-8 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              GEMUN 2025
+              GRAMUN 2025
             </span>
           </div>
           <p className="font-serif text-muted-foreground mb-4">
