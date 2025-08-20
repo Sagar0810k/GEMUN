@@ -87,14 +87,14 @@ export default function LearnMorePage() {
 
   const faqs = [
     {
-      question: "Who can participate in GRAMUN 2025?",
+      question: "Who can participate in MUNERA 2025?",
       answer:
-        "GRAMUN is open to undergraduate and graduate students from all academic backgrounds. No prior MUN experience is required, though we offer committees for all skill levels.",
+        "MUNERA is open to undergraduate and graduate students from all academic backgrounds. No prior MUN experience is required, though we offer committees for all skill levels.",
     },
     {
       question: "What is the registration fee and what does it include?",
       answer:
-        "Registration fee is 1500 INR per delegate, which includes all conference materials, meals during the conference, welcome kit, certificate, and access to all social events.",
+        "Registration fee is 1500 INR per delegate, which includes all conference materials, meals during the conference, welcome kit, certificate, and access to all social events, accomodation not included in it",
     },
     {
       question: "How do I prepare for the conference?",
@@ -121,7 +121,7 @@ export default function LearnMorePage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Globe className="h-8 w-8 text-primary" />
-              <span className="font-sans font-bold text-xl">GRAMUN 2025</span>
+              <span className="font-sans font-bold text-xl">MUNERA 2025</span>
             </Link>
             <Link href="/">
               <Button variant="ghost" className="flex items-center space-x-2">
@@ -139,7 +139,7 @@ export default function LearnMorePage() {
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="scroll-fade-in">
             <h1 className="font-sans font-black text-4xl sm:text-6xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Why Choose GRAMUN?
+              Why Choose MUNERA?
             </h1>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Discover how our Model United Nations conference can transform your academic journey and prepare you for
@@ -155,7 +155,7 @@ export default function LearnMorePage() {
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6">What You'll Gain</h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              GRAMUN offers more than just a conference experience - it's a transformative journey
+              MUNERA offers more than just a conference experience - it's a transformative journey
             </p>
           </div>
 
@@ -183,7 +183,7 @@ export default function LearnMorePage() {
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6">What to Expect</h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your journey with GRAMUN extends beyond the conference days
+              Your journey with MUNERA extends beyond the conference days
             </p>
           </div>
 

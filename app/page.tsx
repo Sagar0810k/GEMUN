@@ -57,14 +57,9 @@ export default function MUNWebsite() {
 
   const committees = [
     {
-      name: "United Nations Commission on the Status of Women",
-      abbreviation: "UNCSW",
-      topic: "Implementing the Beijing Platform for Action in Alignment with the SDGs, with Focus on Strengthening National Mechanisms for Gender Equality and Women's Empowerment.",
-    },
-    {
-      name: "United Nations Framework Convention on Climate Change",
-      abbreviation: "UNFCCC",
-      topic: "Promoting Renewable Energy Transition in Developing Economies through Innovation and sustainable Policies.",
+      name: "United Nations Human Rights Council",
+      abbreviation: "UNHRC",
+      topic: "The Right to a Clean, Healthy, and Sustainable Environment: Advancing Accountability for Environmental Human Rights Violations.",
     },
     {
       name: "United Nations Development Programme",
@@ -72,9 +67,14 @@ export default function MUNWebsite() {
       topic: "Reconciling Global Power Politics with the UNDP’s Mandate of Neutral Democratic Support.",
     },
     {
-      name: "United Nations Human Rights Council",
-      abbreviation: "UNHRC",
-      topic: "The Right to a Clean, Healthy, and Sustainable Environment: Advancing Accountability for Environmental Human Rights Violations.",
+      name: "United Nations Framework Convention on Climate Change",
+      abbreviation: "UNFCCC",
+      topic: "Promoting Renewable Energy Transition in Developing Economies through Innovation and sustainable Policies.",
+    },
+    {
+      name: "United Nations Commission on the Status of Women",
+      abbreviation: "UNCSW",
+      topic: "Implementing the Beijing Platform for Action in Alignment with the SDGs, with Focus on Strengthening National Mechanisms for Gender Equality and Women's Empowerment.",
     },
     {
       name: "Economic and Financial Committee",
@@ -117,19 +117,19 @@ export default function MUNWebsite() {
       name: "Retd. Conl. Prof. A.K.Nair",
       title: "Conference Director ",
       message:
-        "GRAMUN 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
+        "MUNERA 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
     },
     {
       name: "Mrs. Maya G Pillai",
       title: "Event Coordinator",
       message:
-        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by GRAMUN participants. This conference truly prepares students for the complexities of global governance.",
+        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by MUNERA participants. This conference truly prepares students for the complexities of global governance.",
     },
     {
       name: "Ms. Ishita Karnatak",
       title: "Secretary General",
       message:
-        "As someone who has participated in MUN conferences worldwide, I can confidently say that GRAMUN offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
+        "As someone who has participated in MUN conferences worldwide, I can confidently say that MUNERA offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
     },
   ]
 
@@ -144,7 +144,7 @@ export default function MUNWebsite() {
             <div className="flex items-center space-x-2 group">
               <img src="/MUN Logo 1.png" alt="MUN Logo" className="h-10 w-auto" />
               <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                GRAMUN 2025
+                MUNERA 2025
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -286,7 +286,7 @@ export default function MUNWebsite() {
         <div className="max-w-6xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              About GRAMUN
+              About MUNERA
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Join us for an immersive diplomatic experience where students from across the region come together to
@@ -380,7 +380,7 @@ export default function MUNWebsite() {
               Messages from Our Community
             </h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
-              Hear from the distinguished individuals who make GRAMUN an exceptional experience
+              Hear from the distinguished individuals who make MUNERA an exceptional experience
             </p>
           </div>
 
@@ -602,7 +602,7 @@ export default function MUNWebsite() {
           <div className="flex justify-center items-center space-x-2 mb-4 group">
             <Globe className="h-8 w-8 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              GRAMUN 2025
+              MUNERA 2025
             </span>
           </div>
           <p className="font-serif text-muted-foreground mb-4">
