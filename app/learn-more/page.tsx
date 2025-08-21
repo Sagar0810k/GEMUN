@@ -54,34 +54,18 @@ export default function LearnMorePage() {
     },
   ]
 
-  const whatToExpect = [
-    {
-      title: "Pre-Conference Preparation",
-      items: [
-        "Comprehensive study guides for each committee",
-        "Research workshops and training sessions",
-        "Position paper writing guidance",
-        "Mock committee sessions for practice",
-      ],
-    },
-    {
-      title: "Conference Experience",
-      items: [
-        "Professional committee sessions with expert chairs",
-        "Networking opportunities with delegates from 50+ colleges",
-        "Cultural exchange programs and social events",
-        "Awards ceremony recognizing outstanding delegates",
-      ],
-    },
-    {
-      title: "Post-Conference Benefits",
-      items: [
-        "Digital certificates and participation awards",
-        "Access to exclusive MUN alumni network",
-        "Recommendations for future conferences",
-        "Continued learning resources and materials",
-      ],
-    },
+  const delegateBenefits = [
+    "Exclusive delegate privileges ensuring a premium MUN experience",
+    "Participation Certificates for all delegates",
+    "Prestigious awards and prizes across all committees:",
+    "Best Delegate – ₹11,000",
+    "High Commendation – ₹7,000",
+    "Special Mention (2) – ₹3,500 each",
+    "Trophies & Certificates recognizing excellence in every committee",
+    "Opportunities to sharpen leadership, diplomacy, and negotiation skills",
+    "Recognition on official social media & conference platforms",
+    "Comprehensive Delegate Kits with background guides",
+    "Networking opportunities with peers, experts, and mentors",
   ]
 
 
@@ -89,7 +73,7 @@ export default function LearnMorePage() {
     {
       question: "Who can participate in MUNERA 2025?",
       answer:
-        "MUNERA is open to undergraduate and graduate students from all academic backgrounds. No prior MUN experience is required, though we offer committees for all skill levels.",
+        "MUNERA 2025 is open to students of Class 11, Class 12, and all undergraduate and postgraduate programs from across India. Whether you are a first-time delegate or an experienced MUNer, our committees are designed to suit all levels of experience and skill.",
     },
     {
       question: "What is the registration fee and what does it include?",
@@ -177,43 +161,39 @@ export default function LearnMorePage() {
         </div>
       </section>
 
-      {/* What to Expect Section */}
+      {/* Delegate Benefits & Privileges Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
-            <h2 className="font-sans font-bold text-4xl mb-6">What to Expect</h2>
+            <h2 className="font-sans font-bold text-4xl mb-6">Delegate Benefits & Privileges</h2>
             <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
               Your journey with MUNERA extends beyond the conference days
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {whatToExpect.map((phase, index) => (
-              <Card key={index} className="scroll-fade-in">
-                <CardHeader>
-                  <CardTitle className="font-sans font-bold text-xl flex items-center gap-2">
-                    <Target className="h-6 w-6 text-primary" />
-                    {phase.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {phase.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="font-serif text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <Card className="scroll-fade-in">
+            <CardHeader>
+              <CardTitle className="font-sans font-bold text-xl flex items-center gap-2">
+                <Target className="h-6 w-6 text-primary" />
+                Exclusive Privileges
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                {delegateBenefits.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="font-serif text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6">Frequently Asked Questions</h2>
@@ -247,9 +227,11 @@ export default function LearnMorePage() {
               Join hundreds of students from around the world in this transformative diplomatic experience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6">
-                Register Now
-              </Button>
+              <Link href="https://forms.gle/QR4pXivgW35zDCbx6" passHref>
+                <Button size="lg" className="text-lg px-8 py-6">
+                  Register Now
+                </Button>
+              </Link>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
                 Download Brochure
               </Button>
@@ -268,7 +250,7 @@ export default function LearnMorePage() {
           <p className="font-serif text-muted-foreground mb-4">
             Empowering the next generation of global leaders through diplomatic simulation
           </p>
-          <p className="font-serif text-sm text-muted-foreground">© 2025 CollegeMUN. All rights reserved.</p>
+          
         </div>
       </footer>
     </div>

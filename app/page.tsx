@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Sun, Moon, Quote, Shirt } from "lucide-react"
+import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Sun, Moon, Quote, Shirt, Instagram } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import LiquidBackground from "@/components/liquid-background"
@@ -117,19 +117,19 @@ export default function MUNWebsite() {
       name: "Retd. Conl. Prof. A.K.Nair",
       title: "Conference Director ",
       message:
-        "MUNERA 2025 represents the pinnacle of diplomatic education. Our conference provides students with an unparalleled opportunity to engage with global issues, develop critical thinking skills, and build the leadership qualities essential for tomorrow's world leaders.",
+        "It is indeed a great privilege for me to create history along with you all at the momentous occasion of adding a new chapter to the glorious legacy of Graphic Era Hill University Bhimtal Campus, with the launch of MUNERA. I compliment Wordwhims club for taking the initiative and exhibiting courage in conducting the inaugural MUN of our campus. Your venue is the eleventh most beautiful campus in the country and there can be no better place than this serene campus, dotted with colours of blooming flowers, silence pierced only by the avians, abundant freshness in air, green hills all around etc that can cultivate perspective, responsibility and leadership in a global context.MUNERA reflects the firm belief of our University that education must go beyond imparting knowledge. We live in an era where international challenges are no longer distant—they define our daily lives, whether through technology, environment, economics or geopolitics. To engage with such complexity, young minds must be trained not only to master facts, but to ask questions, to listen with empathy, to disagree in an agreeing manner, to put across the perspective firmly and to build solutions collectively with amicability. MUN provides precisely this environment: transition young minds to global citizens.I urge every delegate to treat this conference not simply as a competition, but also as an opportunity to practice the art of diplomacy, to broaden their worldview and to understand the power of dialogue in shaping the future.I extend my best wishes to all participants and look forward to seeing this first edition set a standard of tradition and excellence for years to come.",
     },
     {
       name: "Mrs. Maya G Pillai",
       title: "Event Coordinator",
       message:
-        "Having witnessed the evolution of international diplomacy firsthand, I'm consistently impressed by the caliber of debate and the depth of understanding demonstrated by MUNERA participants. This conference truly prepares students for the complexities of global governance.",
+        "It is with immense pride that I welcome you to the inaugural edition of the Graphic Era Hill University Model United Nations. It is the earnest endeavour of Wordwhims Club to make this a refreshing and memorable experience for the participating delegates, with global ambience stimulating the spirit of global oneness, aligned to the noble Indian principle of Vasudhaiva Kutumbakam.This conference, MUNERA is more than an academic exercise; it is an arena where ideas evolve into solutions and perspectives converge into dialogue. In a world defined by complexity, the ability to think critically, negotiate thoughtfully and act collectively is indispensable. MUNERA aspires to cultivate these very qualities by engaging delegates with pressing global challenges and encouraging them to respond with intellect, empathy, empathy and vision.We look forward to the insights and innovation you will bring to this platform, and to the impact these deliberations will create beyond committee walls. We are eager to see the young minds transforming our picturesque campus to a truly international platform with the air filled with dialogues and ideas of global goodness.",
     },
     {
       name: "Ms. Ishita Karnatak",
       title: "Secretary General",
       message:
-        "As someone who has participated in MUN conferences worldwide, I can confidently say that MUNERA offers an exceptional experience. The combination of rigorous academic preparation, professional facilitation, and meaningful networking makes this conference truly transformative.",
+        "It is with great honor that I welcome you to the first edition of our Model United Nations. This conference is not just a simulation—it is a platform where young leaders come together to question, deliberate, and reimagine solutions for the challenges of our time.Our world today faces pressing issues: climate change, pandemics, conflicts, economic divides, and humanitarian crises that test the strength of global cooperation. In such times, the value of dialogue, diplomacy, and collective action cannot be overstated. This MUN seeks to ignite those very qualities in every delegate.Here, you are not just participants—you are diplomats, innovators, and changemakers. The debates you engage in, the resolutions you draft, and the collaborations you build will go far beyond the committee rooms; they will shape how you view leadership, responsibility, and the global community.I urge you to approach this conference with courage, empathy, and curiosity. Listen as much as you speak, challenge ideas but respect perspectives, and above all, remember that every word has the power to inspire change.I look forward to seeing the energy and intellect that each of you will bring to this historic beginning. May this first edition mark the start of a tradition of diplomacy, dialogue, and discovery.",
     },
   ]
 
@@ -210,11 +210,11 @@ export default function MUNWebsite() {
         <div className="absolute inset-0 bg-background/10 backdrop-blur-sm"></div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="scroll-fade-in">
-            <br /><br />
-            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-6 mt-16 text-darkblue animate-fade-in-down glow" style={{ color: '#fefdf0', textShadow: '0 0 1px #fefdf0, 0 0 2px #fefdf0, 0 0 3px #fefdf0' }}>
-              Graphic Era Hill University Model United Nations Conference 2025
-            </h1>
-            <p className="font-serif text-2xl sm:text-3xl font-semibold mb-4 leading-relaxed animate-fade-in-up glow" style={{ color: '#9ea7d6', animationDelay: "0.3s", animationFillMode: "forwards" }}>
+            <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-10 mt-24 text-darkblue animate-fade-in-down glow" style={{ color: '#fefdf0', textShadow: '0 0 1px #fefdf0, 0 0 2px #fefdf0, 0 0 3px #fefdf0' }}>
+  <span className="block leading-tight">Graphic Era Hill University</span>
+  <span className="block leading-tight">Model United Nations Conference 2025</span>
+</h1>
+            <p className="font-serif text-2xl sm:text-3xl font-semibold mb-8 leading-relaxed animate-fade-in-up glow" style={{ color: '#9ea7d6', animationDelay: "0.3s", animationFillMode: "forwards" }}>
               15th and 16th November 2025
             </p>
             <p className="font-serif text-xl sm:text-2xl mb-8 leading-relaxed opacity-0 animate-fade-in-up glow" style={{ color: '#c9cbd8', animationDelay: "0.6s", animationFillMode: "forwards" }}>
@@ -299,12 +299,12 @@ export default function MUNWebsite() {
               {
                 icon: <Users className="h-12 w-12 text-primary" />,
                 title: "300+ Delegates",
-                description: "Students from over 50 colleges participating in our largest conference yet",
+                description: "Students from schools and colleges across India participating in this national conference",
               },
               {
                 icon: <Globe className="h-12 w-12 text-primary" />,
                 title: "7 Committees",
-                description: "Diverse range of UN bodies covering global challenges and opportunities",
+                description: "A diverse mix of UN bodies and other forums addressing global and national issues",
               },
               {
                 icon: <Award className="h-12 w-12 text-primary" />,
@@ -400,11 +400,9 @@ export default function MUNWebsite() {
                   <div className="flex items-center space-x-6 mt-auto">
                     <div>
                       <h4 className="font-sans font-bold text-xl mb-1 group-hover:text-primary transition-colors duration-300">
-                        {person.name}
-                      </h4>
-                      <p className="font-serif text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                         {person.title}
-                      </p>
+                      </h4>
+                      
                     </div>
                   </div>
                 </CardContent>
@@ -493,7 +491,7 @@ export default function MUNWebsite() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="scroll-fade-in mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Dress Code
+              Delegate Attire
             </h2>
             <p className="font-serif text-xl text-muted-foreground">
               Please adhere to the dress code for each day of the conference.
@@ -553,15 +551,19 @@ export default function MUNWebsite() {
                   <Mail className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-serif">bhimtal.mun@gehu.ac.in</span>
                 </div>
-                
+                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
+                  <Instagram className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <Link href="https://www.instagram.com/munera_gehu" passHref>
+                    <span className="font-serif">munera_gehu</span>
+                  </Link>
+                </div>
+                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
+                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  <span className="font-serif">Head to Delegate Affairs : +91 87550 58526</span>
+                </div>
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-serif">Director General : +91 70608 71677</span>
-                </div>
-                
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Coul Affairs : +91 87550 58526</span>
                 </div>
               </CardContent>
             </Card>
