@@ -158,7 +158,8 @@ export default function MUNWebsite() {
               >
                 About
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </a
+              >
               <Link
                 href="#committees"
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
@@ -239,17 +240,17 @@ export default function MUNWebsite() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-lg px-8 py-6 bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
+                  className="text-lg px-8 py-6 text-white bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
                 >
                   Learn More
                 </Button>
               </Link>
               {/* Added a button for downloading the brochure */}
-              <Link href="/brochure.pdf" passHref>
+              <Link href="/MUNERA Brochure.pdf" passHref>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="text-lg px-8 py-6 bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
+                  className="text-lg px-8 py-6 text-white bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
                 >
                   Download Brochure
                 </Button>

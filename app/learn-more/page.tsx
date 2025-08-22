@@ -246,7 +246,7 @@ export default function LearnMorePage() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-center items-center space-x-2 mb-4">
             <Globe className="h-8 w-8 text-primary" />
-            <span className="font-sans font-bold text-xl">CollegeMUN 2025</span>
+            <span className="font-sans font-bold text-xl">MUNERA 2025</span>
           </div>
           <p className="font-serif text-muted-foreground mb-4">
             Empowering the next generation of global leaders through diplomatic simulation
