@@ -95,27 +95,27 @@ export default function MUNWebsite() {
 
 
   const schedule = [
-    { time: "8:00 - 9:00 am", event: "Registration" },
-    { time: "9:00 - 9:30 am", event: "High Tea" },
-    { time: "9:30 - 10:30 am", event: "Inaugural" },
+    { time: "8:00 am- 9:00 am", event: "Registration" },
+    { time: "9:00 am- 9:30 am", event: "High Tea" },
+    { time: "9:30 am- 10:30 am", event: "Conference Inaugural" },
     { time: "10:30 am - 1:00 pm", event: "Session 1" },
-    { time: "1:00 - 2:00 pm", event: "Lunch" },
-    { time: "2:00 - 5:00 pm", event: "Session 2" },
-    { time: "5:00 - 5:30 pm", event: "High Tea" },
+    { time: "1:00 pm- 2:00 pm", event: "Lunch" },
+    { time: "2:00 pm- 5:00 pm", event: "Session 2" },
+    { time: "5:00 pm- 5:30 pm", event: "High Tea" },
   ]
 
   const scheduleDay2 = [
     { time: "10:00 am - 1:00 pm", event: "Session 3" },
-    { time: "1:00 - 2:00 pm", event: "Lunch" },
-    { time: "2:00 - 4:00 pm", event: "Session 4" },
-    { time: "4:00 - 5:00 pm", event: "Closing Ceremony & Prize Distribution" },
-    { time: "5:00 - 6:30 pm", event: "Socials & High Tea" },
+    { time: "1:00 pm- 2:00 pm", event: "Lunch" },
+    { time: "2:00 pm- 4:00 pm", event: "Session 4" },
+    { time: "4:00 pm- 5:00 pm", event: "Closing Ceremony & Prize Distribution" },
+    { time: "5:00 pm- 6:30 pm", event: "Socials & High Tea" },
   ]
 
   const messages = [
     {
       name: "Retd. Conl. Prof. A.K.Nair",
-      title: "Conference Director ",
+      title: "Director ",
       message:
         "It is indeed a great privilege for me to create history along with you all at the momentous occasion of adding a new chapter to the glorious legacy of Graphic Era Hill University Bhimtal Campus, with the launch of MUNERA. I compliment Wordwhims club for taking the initiative and exhibiting courage in conducting the inaugural MUN of our campus. Your venue is the eleventh most beautiful campus in the country and there can be no better place than this serene campus, dotted with colours of blooming flowers, silence pierced only by the avians, abundant freshness in air, green hills all around etc that can cultivate perspective, responsibility and leadership in a global context.MUNERA reflects the firm belief of our University that education must go beyond imparting knowledge. We live in an era where international challenges are no longer distant—they define our daily lives, whether through technology, environment, economics or geopolitics. To engage with such complexity, young minds must be trained not only to master facts, but to ask questions, to listen with empathy, to disagree in an agreeing manner, to put across the perspective firmly and to build solutions collectively with amicability. MUN provides precisely this environment: transition young minds to global citizens.I urge every delegate to treat this conference not simply as a competition, but also as an opportunity to practice the art of diplomacy, to broaden their worldview and to understand the power of dialogue in shaping the future.I extend my best wishes to all participants and look forward to seeing this first edition set a standard of tradition and excellence for years to come.",
     },
@@ -211,9 +211,9 @@ export default function MUNWebsite() {
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <div className="scroll-fade-in">
             <h1 className="font-sans font-black text-3xl sm:text-5xl lg:text-6xl mb-10 mt-24 text-darkblue animate-fade-in-down glow" style={{ color: '#fefdf0', textShadow: '0 0 1px #fefdf0, 0 0 2px #fefdf0, 0 0 3px #fefdf0' }}>
-  <span className="block leading-tight">Graphic Era Hill University</span>
-  <span className="block leading-tight">Model United Nations Conference 2025</span>
-</h1>
+              <span className="block leading-tight">Graphic Era Hill University</span>
+              <span className="block leading-tight">Model United Nations Conference 2025</span>
+            </h1>
             <p className="font-serif text-2xl sm:text-3xl font-semibold mb-8 leading-relaxed animate-fade-in-up glow" style={{ color: '#9ea7d6', animationDelay: "0.3s", animationFillMode: "forwards" }}>
               15th and 16th November 2025
             </p>
@@ -242,6 +242,16 @@ export default function MUNWebsite() {
                   className="text-lg px-8 py-6 bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
                 >
                   Learn More
+                </Button>
+              </Link>
+              {/* Added a button for downloading the brochure */}
+              <Link href="/brochure.pdf" passHref>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 py-6 bg-transparent hover:bg-primary/5 transform hover:scale-105 hover:shadow-lg transition-all duration-300 border-2 hover:border-primary"
+                >
+                  Download Brochure
                 </Button>
               </Link>
             </div>
@@ -502,7 +512,8 @@ export default function MUNWebsite() {
             <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group bg-gradient-to-br from-card to-card/50 border-primary/10">
               <CardContent className="p-8">
                 <div className="flex justify-center mb-6">
-                  <Shirt className="h-16 w-16 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  {/* Replaced Shirt icon with image tag for Indian Formals */}
+                  <img src="/Indian Formals.png" alt="Indian Formals" className="h-24 w-24 transform group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="font-sans font-bold text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
                   Day 1
@@ -512,10 +523,12 @@ export default function MUNWebsite() {
                 </p>
               </CardContent>
             </Card>
+
             <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group bg-gradient-to-br from-card to-card/50 border-primary/10">
               <CardContent className="p-8">
                 <div className="flex justify-center mb-6">
-                  <Shirt className="h-16 w-16 text-primary transform group-hover:scale-110 transition-transform duration-300" />
+                  {/* Replaced Shirt icon with image tag for Western Formals */}
+                  <img src="/Western Formals.png" alt="Western Formals" className="h-24 w-24 transform group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <h3 className="font-sans font-bold text-2xl mb-2 group-hover:text-primary transition-colors duration-300">
                   Day 2

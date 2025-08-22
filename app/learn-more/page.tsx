@@ -93,7 +93,7 @@ export default function LearnMorePage() {
     {
       question: "Are there awards and recognition?",
       answer:
-        "Yes! We recognize outstanding delegates, best position papers, and exceptional diplomacy. Awards include certificates, trophies, and special recognition at the closing ceremony.",
+        "Yes. We recognize delegates with Outstanding Delegate, High Commendation, and Special Mention (1 & 2) awards. Winners will be honored with certificates, trophies, and cash prizes during the closing ceremony.",
     },
   ]
 
@@ -125,10 +125,11 @@ export default function LearnMorePage() {
             <h1 className="font-sans font-black text-4xl sm:text-6xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Why Choose MUNERA?
             </h1>
-            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Discover how our Model United Nations conference can transform your academic journey and prepare you for
-              global leadership
-            </p>
+            <div className="max-w-3xl mx-auto max-h-40 overflow-y-auto hide-scrollbar">
+              <p className="font-serif text-xl text-muted-foreground leading-relaxed">
+                MUNERA 2025, the much-anticipated Model United Nations conference, is being proudly organized by the WordWhims Club of Graphic Era Hill University, Bhimtal, a campus recognized as the 11th most beautiful in India. Set amid the stunning natural beauty of Bhimtal’s hills and lakes, Graphic Era Hill University offers an inspiring and serene environment that perfectly complements the spirit of thoughtful debate and global diplomacy. This event, open to students of 11th and 12th grades as well as college students, invites young leaders to engage deeply in critical discussions, develop essential skills in public speaking, negotiation, and teamwork, and collaborate on solving pressing global issues. MUNERA 2025 promises an enriching experience where participants from diverse educational backgrounds come together to hone their leadership abilities, build lasting networks, and immerse themselves in a dynamic atmosphere of intellectual challenge and innovation. Organized with dedication by the WordWhims Club, this conference offers a unique platform to debate with passion and represent your views on international matters, all while enjoying the unmatched ambience of one of India’s most prestigious and scenic university campuses. Join us for this extraordinary event that blends academic excellence with natural splendor, creating the perfect setting for the leaders of tomorrow to make their voices heard.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -198,7 +199,7 @@ export default function LearnMorePage() {
           <div className="scroll-fade-in text-center mb-16">
             <h2 className="font-sans font-bold text-4xl mb-6">Frequently Asked Questions</h2>
             <p className="font-serif text-xl text-muted-foreground">
-              Everything you need to know about participating in CollegeMUN 2025
+              Everything you need to know about participating in MUNERA 2025
             </p>
           </div>
 
