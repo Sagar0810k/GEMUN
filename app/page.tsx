@@ -573,7 +573,7 @@ export default function MUNWebsite() {
                 </div>
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Head to Delegate Affairs : +91 87550 58526</span>
+                  <span className="font-serif">Head of Delegate Affairs : +91 87550 58526</span>
                 </div>
                 <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
                   <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
