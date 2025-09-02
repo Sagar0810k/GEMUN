@@ -3,7 +3,7 @@
 import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Globe, ArrowLeft, BookOpen, Users, Award, CheckCircle, Star, Target, Lightbulb } from "lucide-react"
+import { Globe, ArrowLeft, BookOpen, Users, Award, CheckCircle, Star, Target, Lightbulb, Trophy, Camera, PenTool, Image as ImageIcon } from "lucide-react"
 import Link from "next/link"
 
 export default function LearnMorePage() {
@@ -57,13 +57,6 @@ export default function LearnMorePage() {
   const delegateBenefits = [
     "Exclusive delegate privileges ensuring a premium MUN experience",
     "Participation Certificates for all delegates",
-    "Prestigious awards and prizes across all committees:",
-    "Best Delegate – ₹10,000",
-    "High Commendation – ₹7,000",
-    "Special Mention – ₹3,000 each",
-    "Best Photographer – ₹10,000",
-    "Best Journalist – ₹7,000",
-    "Best Caricaturist – ₹3,000 each",
     "Trophies & Certificates recognizing excellence in every committee",
     "Opportunities to sharpen leadership, diplomacy, and negotiation skills",
     "Recognition on official social media & conference platforms",
@@ -99,6 +92,19 @@ export default function LearnMorePage() {
         "Yes. We recognize delegates with Outstanding Delegate, High Commendation, and Special Mention (1 & 2) awards. Winners will be honored with certificates, trophies, and cash prizes during the closing ceremony.",
     },
   ]
+
+  const awards = {
+    committees: [
+      { title: "Best Delegate", prize: "₹10,000", icon: <Trophy className="h-10 w-10 text-yellow-500" /> },
+      { title: "High Commendation", prize: "₹7,000", icon: <Award className="h-10 w-10 text-gray-400" /> },
+      { title: "Special Mention", prize: "₹3,000", icon: <Star className="h-10 w-10 text-blue-400" /> },
+    ],
+    ip: [
+      { title: "Best Photographer", prize: "₹5,000", icon: <Camera className="h-10 w-10 text-indigo-500" /> },
+      { title: "Best Journalist", prize: "₹5,000", icon: <PenTool className="h-10 w-10 text-green-500" /> },
+      { title: "Best Caricaturist", prize: "₹5,000", icon: <ImageIcon className="h-10 w-10 text-red-500" /> },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -195,7 +201,59 @@ export default function LearnMorePage() {
           </Card>
         </div>
       </section>
+      
+      {/* Awards Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="scroll-fade-in text-center mb-16">
+            <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Prestigious Awards & Prizes
+            </h2>
+            <p className="font-serif text-xl text-muted-foreground max-w-3xl mx-auto">
+              We celebrate excellence in diplomacy, journalism, and artistry with significant cash prizes.
+            </p>
+          </div>
 
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="scroll-fade-in bg-card-light dark:bg-card-dark p-6">
+              <h3 className="font-sans font-bold text-2xl mb-6 text-center text-primary-dark">
+                <Trophy className="inline-block h-8 w-8 mr-2 text-yellow-500" />
+                Committee Awards
+              </h3>
+              <div className="space-y-6">
+                {awards.committees.map((award, index) => (
+                  <div key={index} className="flex items-center space-x-4 p-4 rounded-lg bg-background-light dark:bg-background-dark">
+                    <div className="flex-shrink-0">{award.icon}</div>
+                    <div>
+                      <h4 className="font-sans font-semibold text-lg">{award.title}</h4>
+                      <p className="font-sans font-extrabold text-3xl mt-1 text-primary-dark">{award.prize}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+
+            <Card className="scroll-fade-in bg-card-light dark:bg-card-dark p-6">
+              <h3 className="font-sans font-bold text-2xl mb-6 text-center text-primary-dark">
+                <Globe className="inline-block h-8 w-8 mr-2 text-blue-500" />
+                International Press Awards
+              </h3>
+              <div className="space-y-6">
+                {awards.ip.map((award, index) => (
+                  <div key={index} className="flex items-center space-x-4 p-4 rounded-lg bg-background-light dark:bg-background-dark">
+                    <div className="flex-shrink-0">{award.icon}</div>
+                    <div>
+                      <h4 className="font-sans font-semibold text-lg">{award.title}</h4>
+                      <p className="font-sans font-extrabold text-3xl mt-1 text-primary-dark">{award.prize}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+      
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -256,7 +314,6 @@ export default function LearnMorePage() {
           <p className="font-serif text-muted-foreground mb-4">
             Empowering the next generation of global leaders through diplomatic simulation
           </p>
-          
         </div>
       </footer>
     </div>
