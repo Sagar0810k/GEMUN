@@ -246,7 +246,7 @@ export default function MUNWebsite() {
                 </Button>
               </Link>
               {/* Added a button for downloading the brochure */}
-              <Link href="/MUNER_ Brochure.pdf" passHref>
+              <Link href="/MUNERA_Brochure.pdf" passHref>
                 <Button
                   variant="outline"
                   size="lg"

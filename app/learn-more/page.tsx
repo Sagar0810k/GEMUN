@@ -236,7 +236,7 @@ export default function LearnMorePage() {
                   Register Now
                 </Button>
               </Link>
-              <Link href="/MUNER_ Brochure.pdf" passHref>
+              <Link href="/MUNERA_Brochure.pdf" passHref>
                 <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-transparent">
                   Download Brochure
                 </Button>
