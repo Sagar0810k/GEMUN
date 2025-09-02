@@ -73,7 +73,7 @@ export default function LearnMorePage() {
     {
       question: "Who can participate in MUNERA 2025?",
       answer:
-        "MUNERA 2025 is open to students of Class 11, Class 12, and all undergraduate and postgraduate programs from across India. Whether you are a first-time delegate or an experienced MUNer, our committees are designed to suit all levels of experience and skill.",
+        "MUNERA 2025 is open to students of Class 10, Class 11, Class 12, and all undergraduate and postgraduate programs from across India. Whether you are a first-time delegate or an experienced MUNer, our committees are designed to suit all levels of experience and skill.",
     },
     {
       question: "What is the registration fee and what does it include?",
