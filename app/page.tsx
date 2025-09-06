@@ -7,6 +7,7 @@ import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Su
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import LiquidBackground from "@/components/liquid-background"
+import Footer from "@/components/footer" // Import the new Footer component
 
 export default function MUNWebsite() {
   const [timeLeft, setTimeLeft] = useState({
@@ -133,6 +134,7 @@ export default function MUNWebsite() {
     },
   ]
 
+
   return (
     <div className="min-h-screen bg-background relative">
       <LiquidBackground />
@@ -180,14 +182,16 @@ export default function MUNWebsite() {
               >
                 Schedule
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </a
+              >
               <a
                 href="#dress-code"
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
               >
                 Dress Code
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </a
+              >
               <Button
                 variant="ghost"
                 size="icon"
@@ -343,7 +347,7 @@ export default function MUNWebsite() {
           </div>
         </div>
       </section>
-      
+
       {/* Committees and Agendas Section */}
       <section id="committees" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
@@ -413,7 +417,7 @@ export default function MUNWebsite() {
                       <h4 className="font-sans font-bold text-xl mb-1 group-hover:text-primary transition-colors duration-300">
                         {person.title}
                       </h4>
-                      
+
                     </div>
                   </div>
                 </CardContent>
@@ -543,89 +547,8 @@ export default function MUNWebsite() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="scroll-fade-in text-center mb-16">
-            <h2 className="font-sans font-bold text-4xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Get In Touch
-            </h2>
-            <p className="font-serif text-xl text-muted-foreground">
-              Have questions? We're here to help you prepare for an amazing MUN experience
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-card to-card/50 border-primary/10">
-              <CardHeader>
-                <CardTitle className="font-sans font-bold">Contact Information</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Mail className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">bhimtal.mun@gehu.ac.in</span>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Instagram className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <Link href="https://www.instagram.com/munera_gehu" passHref>
-                    <span className="font-serif">munera_gehu</span>
-                  </Link>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Head of Delegate Affairs : +91 87550 58526</span>
-                </div>
-                <div className="flex items-center space-x-3 group hover:text-primary transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-primary transform group-hover:scale-110 transition-transform duration-300" />
-                  <span className="font-serif">Director General : +91 70608 71677</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="scroll-fade-in hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-card to-card/50 border-primary/10">
-              <CardHeader>
-                <CardTitle className="font-sans font-bold">Quick Links</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                
-                <Link
-                  href="https://forms.gle/QR4pXivgW35zDCbx6"
-                  passHref
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start bg-transparent hover:bg-primary/10 transform hover:scale-105 transition-all duration-300 group"
-                  >
-                    <Calendar className="h-4 w-4 mr-2 transform group-hover:rotate-12 transition-transform duration-300" />
-                    Registration Form
-                  </Button>
-                </Link>
-                <Link
-                  href="/committee-guides"
-                  passHref
-                >
-                  
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center items-center space-x-2 mb-4 group">
-            <Globe className="h-8 w-8 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-sans font-bold text-xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              MUNERA 2025
-            </span>
-          </div>
-          <p className="font-serif text-muted-foreground mb-4">
-            Empowering the next generation of global leaders through diplomatic simulation
-          </p>
-        </div>
-      </footer>
+      {/* Replaced Contact and Footer Sections with the new Footer component */}
+      <Footer />
     </div>
   )
 }

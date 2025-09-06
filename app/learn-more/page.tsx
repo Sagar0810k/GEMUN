@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Globe, ArrowLeft, BookOpen, Users, Award, CheckCircle, Star, Target, Lightbulb, Trophy, Camera, PenTool, Image as ImageIcon } from "lucide-react"
 import Link from "next/link"
+import Footer from "@/components/footer";
 
 export default function LearnMorePage() {
   useEffect(() => {
@@ -201,7 +202,7 @@ export default function LearnMorePage() {
           </Card>
         </div>
       </section>
-      
+
       {/* Awards Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -253,7 +254,7 @@ export default function LearnMorePage() {
           </div>
         </div>
       </section>
-      
+
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -305,17 +306,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center items-center space-x-2 mb-4">
-            <Globe className="h-8 w-8 text-primary" />
-            <span className="font-sans font-bold text-xl">MUNERA 2025</span>
-          </div>
-          <p className="font-serif text-muted-foreground mb-4">
-            Empowering the next generation of global leaders through diplomatic simulation
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
