@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Montserrat, Open_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import WhatsAppButton from "@/components/WhatsAppButton"; // Import the new component
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -29,18 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <style>{`
-html {
-  font-family: ${openSans.style.fontFamily};
-  --font-sans: ${montserrat.variable};
-  --font-serif: ${openSans.variable};
-}
-        `}</style>
         <link rel="icon" href="/MUN Logo 1.ico" />
       </head>
-      <body className={`${montserrat.variable} ${openSans.variable} antialiased`}>
+      <body className={`${montserrat.variable} ${openSans.variable} antialiased font-serif`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
+          <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>
