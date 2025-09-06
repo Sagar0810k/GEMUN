@@ -7,7 +7,8 @@ import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Su
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import LiquidBackground from "@/components/liquid-background"
-import Footer from "@/components/footer" // Import the new Footer component
+import Footer from "@/components/footer"
+import ReadMore from "@/components/ReadMore"
 
 export default function MUNWebsite() {
   const [timeLeft, setTimeLeft] = useState({
@@ -160,8 +161,7 @@ export default function MUNWebsite() {
               >
                 About
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a
-              >
+              </a>
               <Link
                 href="#committees"
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
@@ -182,16 +182,14 @@ export default function MUNWebsite() {
               >
                 Schedule
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a
-              >
+              </a>
               <a
                 href="#dress-code"
                 className="relative text-foreground hover:text-primary transition-all duration-300 group"
               >
                 Dress Code
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a
-              >
+              </a>
               <Button
                 variant="ghost"
                 size="icon"
@@ -387,7 +385,7 @@ export default function MUNWebsite() {
       </section>
 
 
-      {/* Messages Section */}
+      {/* Updated Messages Section */}
       <section id="messages" className="py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="scroll-fade-in text-center mb-20">
@@ -409,15 +407,14 @@ export default function MUNWebsite() {
                   <div className="flex justify-center mb-8">
                     <Quote className="h-10 w-10 text-primary transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
                   </div>
-                  <p className="font-serif text-muted-foreground mb-8 leading-relaxed italic text-lg flex-grow group-hover:text-foreground transition-colors duration-300">
-                    "{person.message}"
-                  </p>
+                  <div className="font-serif text-muted-foreground mb-8 leading-relaxed italic text-lg flex-grow group-hover:text-foreground transition-colors duration-300">
+                    <ReadMore text={`"${person.message}"`} maxLength={200} />
+                  </div>
                   <div className="flex items-center space-x-6 mt-auto">
                     <div>
                       <h4 className="font-sans font-bold text-xl mb-1 group-hover:text-primary transition-colors duration-300">
                         {person.title}
                       </h4>
-
                     </div>
                   </div>
                 </CardContent>
