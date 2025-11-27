@@ -213,7 +213,7 @@ export default function MUNWebsite() {
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
               <Link
-                href="/highlights"
+                href="https://drive.google.com/drive/folders/1WLBhKtz35DdHWuN1GzB5n58jKCDK7WNh?usp=sharing"
                 passHref
               >
                 <Button
@@ -260,9 +260,7 @@ export default function MUNWebsite() {
                   <p className="text-xl font-serif text-muted-foreground uppercase tracking-wider font-medium">
                     Thank you to all delegates and executive board members for a successful conference.
                   </p>
-                  <p className="text-lg font-serif text-primary mt-3">
-                    Stay tuned for highlights and details on the next edition!
-                  </p>
+                  
                 </Card>
               </div>
             ) : (
