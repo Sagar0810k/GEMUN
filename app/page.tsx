@@ -17,15 +17,27 @@ export default function MUNWebsite() {
     minutes: 0,
     seconds: 0,
   })
+  // New state to manage the display based on conference status
+  const [isConferenceOver, setIsConferenceOver] = useState(false); 
   const { theme, setTheme } = useTheme()
 
   const conferenceDate = new Date("2025-11-15T09:00:00")
+  // Defining the conference end time for a clear cutoff
+  const conferenceEndDate = new Date("2025-11-16T18:30:00"); 
 
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = conferenceDate.getTime() - now
+      
+      // Logic to check if the conference is over
+      if (now > conferenceEndDate.getTime()) {
+        setIsConferenceOver(true);
+        clearInterval(timer); // Stop the countdown
+        return;
+      }
 
+      // Original countdown logic (runs only if conference is not over)
       const days = Math.floor(distance / (1000 * 60 * 60 * 24))
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
@@ -35,7 +47,7 @@ export default function MUNWebsite() {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [conferenceDate])
+  }, [conferenceDate, conferenceEndDate])
 
   useEffect(() => {
     const observerOptions = {
@@ -235,7 +247,7 @@ export default function MUNWebsite() {
                   size="lg"
                   className="text-lg px-8 py-6 transform hover:scale-105 hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary"
                 >
-                  <span className="relative z-10">Register Now</span>
+                  <span className="relative z-10">View Conference Highlights</span>
                 </Button>
               </Link>
               <Link href="/learn-more">
@@ -260,36 +272,56 @@ export default function MUNWebsite() {
             </div>
           </div>
 
-          {/* Countdown Timer */}
+          {/* Conditional Display for Countdown/Concluded Message */}
           <div
             className="scroll-fade-in opacity-0 animate-fade-in-up"
             style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
           >
-            <h2 className="font-sans font-bold text-2xl mb-6" style={{ color: '#9ea7d6' }}>
-              Conference Countdown
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-              {[
-                { label: "Days", value: timeLeft.days },
-                { label: "Hours", value: timeLeft.hours },
-                { label: "Minutes", value: timeLeft.minutes },
-                { label: "Seconds", value: timeLeft.seconds },
-              ].map((item, index) => (
-                <Card
-                  key={index}
-                  className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-card/80 border-primary/20"
-                >
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-sans font-bold text-primary mb-2 animate-pulse">
-                      {item.value.toString().padStart(2, "0")}
-                    </div>
-                    <div className="text-sm text-muted-foreground uppercase tracking-wide font-medium">
-                      {item.label}
-                    </div>
-                  </CardContent>
+            {isConferenceOver ? (
+              // Conference Over Message
+              <div className="max-w-2xl mx-auto">
+                <Card className="text-center transform hover:scale-[1.01] transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-card/80 border-primary/20 p-8">
+                  <h2 className="font-sans font-black text-3xl mb-4 text-primary">
+                    🎉 MUNERA 2025 Concluded! 🎉
+                  </h2>
+                  <p className="text-xl font-serif text-muted-foreground uppercase tracking-wider font-medium">
+                    Thank you to all delegates and executive board members for a successful conference.
+                  </p>
+                  <p className="text-lg font-serif text-primary mt-3">
+                    Stay tuned for highlights and details on the next edition!
+                  </p>
                 </Card>
-              ))}
-            </div>
+              </div>
+            ) : (
+              // Original Countdown Timer (will only show if conference is NOT over)
+              <>
+                <h2 className="font-sans font-bold text-2xl mb-6" style={{ color: '#9ea7d6' }}>
+                  Conference Countdown
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                  {[
+                    { label: "Days", value: timeLeft.days },
+                    { label: "Hours", value: timeLeft.hours },
+                    { label: "Minutes", value: timeLeft.minutes },
+                    { label: "Seconds", value: timeLeft.seconds },
+                  ].map((item, index) => (
+                    <Card
+                      key={index}
+                      className="text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-card/80 border-primary/20"
+                    >
+                      <CardContent className="p-6">
+                        <div className="text-3xl font-sans font-bold text-primary mb-2 animate-pulse">
+                          {item.value.toString().padStart(2, "0")}
+                        </div>
+                        <div className="text-sm text-muted-foreground uppercase tracking-wide font-medium">
+                          {item.label}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
@@ -544,7 +576,7 @@ export default function MUNWebsite() {
         </div>
       </section>
 
-      {/* Replaced Contact and Footer Sections with the new Footer component */}
+      {/* Footer component */}
       <Footer />
     </div>
   )
