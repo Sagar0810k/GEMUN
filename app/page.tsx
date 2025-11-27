@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Clock, Users, Globe, Award, BookOpen, Mail, Phone, MapPin, Sun, Moon, Quote, Shirt, Instagram } from "lucide-react"
+import { Users, Globe, Award, Sun, Moon, Quote } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 import LiquidBackground from "@/components/liquid-background"
@@ -11,45 +11,17 @@ import Footer from "@/components/footer"
 import ReadMore from "@/components/ReadMore"
 
 export default function MUNWebsite() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
-  // New state to manage the display based on conference status
-  const [isConferenceOver, setIsConferenceOver] = useState(false); 
+  // Removed timeLeft state as it is no longer needed
+  
+  // Explicitly set conference status to true to display the 'Concluded' message
+  const [isConferenceOver, setIsConferenceOver] = useState(true); 
   const { theme, setTheme } = useTheme()
 
-  const conferenceDate = new Date("2025-11-15T09:00:00")
-  // Defining the conference end time for a clear cutoff
-  const conferenceEndDate = new Date("2025-11-16T18:30:00"); 
+  // Removed useEffect hooks for countdown calculation and intersection observer for simplicity
+  // Assuming necessary polyfills/imports handle intersection observer outside this file
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime()
-      const distance = conferenceDate.getTime() - now
-      
-      // Logic to check if the conference is over
-      if (now > conferenceEndDate.getTime()) {
-        setIsConferenceOver(true);
-        clearInterval(timer); // Stop the countdown
-        return;
-      }
-
-      // Original countdown logic (runs only if conference is not over)
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-
-      setTimeLeft({ days, hours, minutes, seconds })
-    }, 1000)
-
-    return () => clearInterval(timer)
-  }, [conferenceDate, conferenceEndDate])
-
-  useEffect(() => {
+    // Re-adding Intersection Observer logic for scroll fade-in effects (Crucial for styling)
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
@@ -68,6 +40,7 @@ export default function MUNWebsite() {
 
     return () => observer.disconnect()
   }, [])
+
 
   const committees = [
     {
@@ -240,7 +213,7 @@ export default function MUNWebsite() {
               style={{ animationDelay: "1s", animationFillMode: "forwards" }}
             >
               <Link
-                href="https://forms.gle/QR4pXivgW35zDCbx6"
+                href="/highlights"
                 passHref
               >
                 <Button
@@ -278,7 +251,7 @@ export default function MUNWebsite() {
             style={{ animationDelay: "1.5s", animationFillMode: "forwards" }}
           >
             {isConferenceOver ? (
-              // Conference Over Message
+              // Conference Over Message (now hardcoded to show)
               <div className="max-w-2xl mx-auto">
                 <Card className="text-center transform hover:scale-[1.01] transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-card to-card/80 border-primary/20 p-8">
                   <h2 className="font-sans font-black text-3xl mb-4 text-primary">
@@ -293,17 +266,18 @@ export default function MUNWebsite() {
                 </Card>
               </div>
             ) : (
-              // Original Countdown Timer (will only show if conference is NOT over)
+              // Original Countdown Timer (will not show unless isConferenceOver is explicitly set to false)
               <>
                 <h2 className="font-sans font-bold text-2xl mb-6" style={{ color: '#9ea7d6' }}>
                   Conference Countdown
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
                   {[
-                    { label: "Days", value: timeLeft.days },
-                    { label: "Hours", value: timeLeft.hours },
-                    { label: "Minutes", value: timeLeft.minutes },
-                    { label: "Seconds", value: timeLeft.seconds },
+                    // These values will be 0:0:0:0 but the component will be hidden
+                    { label: "Days", value: 0 },
+                    { label: "Hours", value: 0 },
+                    { label: "Minutes", value: 0 },
+                    { label: "Seconds", value: 0 },
                   ].map((item, index) => (
                     <Card
                       key={index}
@@ -325,6 +299,8 @@ export default function MUNWebsite() {
           </div>
         </div>
       </section>
+      
+      ---
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -378,6 +354,8 @@ export default function MUNWebsite() {
         </div>
       </section>
 
+      ---
+
       {/* Committees and Agendas Section */}
       <section id="committees" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
@@ -415,6 +393,8 @@ export default function MUNWebsite() {
           </div>
         </div>
       </section>
+
+      ---
 
 
       {/* Updated Messages Section */}
@@ -456,6 +436,8 @@ export default function MUNWebsite() {
         </div>
       </section>
 
+      ---
+
       {/* Schedule Section */}
       <section id="schedule" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-4xl mx-auto">
@@ -481,7 +463,7 @@ export default function MUNWebsite() {
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div className="flex items-center space-x-4 mb-2 md:mb-0">
                           <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
+                            <Users className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
                             <span className="font-sans font-semibold group-hover:text-primary transition-colors duration-300">
                               {item.time}
                             </span>
@@ -511,7 +493,7 @@ export default function MUNWebsite() {
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                         <div className="flex items-center space-x-4 mb-2 md:mb-0">
                           <div className="flex items-center space-x-2">
-                            <Clock className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
+                            <Users className="h-5 w-5 text-primary transform group-hover:rotate-12 transition-transform duration-300" />
                             <span className="font-sans font-semibold group-hover:text-primary transition-colors duration-300">
                               {item.time}
                             </span>
@@ -529,6 +511,8 @@ export default function MUNWebsite() {
           </div>
         </div>
       </section>
+
+      ---
 
       {/* Dress Code Section */}
       <section id="dress-code" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -553,7 +537,7 @@ export default function MUNWebsite() {
                   Day 1
                 </h3>
                 <p className="font-serif text-xl text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  Indian Formals
+                  **Indian Formals**
                 </p>
               </CardContent>
             </Card>
@@ -568,7 +552,7 @@ export default function MUNWebsite() {
                   Day 2
                 </h3>
                 <p className="font-serif text-xl text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                  Western Formals
+                  **Western Formals**
                 </p>
               </CardContent>
             </Card>
@@ -576,6 +560,8 @@ export default function MUNWebsite() {
         </div>
       </section>
 
+      ---
+      
       {/* Footer component */}
       <Footer />
     </div>
